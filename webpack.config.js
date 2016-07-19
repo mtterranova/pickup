@@ -1,4 +1,5 @@
 module.exports = {
+  devtool: 'source-map',
   entry: [
     './client/index.js'
   ],
@@ -9,10 +10,10 @@ module.exports = {
   module: {
     loaders: [
       {
-       test: /\.js$/, 
-       exclude: /node_modules/, 
+       test: /\.js$/,
+       exclude: /node_modules/,
        loader: "babel-loader",
-       query: { presets: ['es2015', 'react'] } 
+       query: { presets: ['es2015', 'react'] }
      }
     ]
   }

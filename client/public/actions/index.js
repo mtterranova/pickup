@@ -3,9 +3,9 @@ import { browserHistory } from 'react-router';
 
 export const SUBMIT_GAME = 'SUBMIT-GAME';
 export const GET_GAMES = 'GET-GAMES';
-export const SEARCH_GAMES = 'SEARCH-GAMES'; 
-export const SUBMIT_PLAYER = 'SUBMIT-PLAYER'; 
-export const POSSIBLE_LOCATIONS = 'POSSIBLE-LOCATIONS'; 
+export const SEARCH_GAMES = 'SEARCH-GAMES';
+export const SUBMIT_PLAYER = 'SUBMIT-PLAYER';
+export const POSSIBLE_LOCATIONS = 'POSSIBLE-LOCATIONS';
 export const DETERMINED_LOCATION = 'DETERMINED-LOCATION';
 export const CLEAR_LOCATIONS = 'CLEAR-LOCATIONS';
 
@@ -20,7 +20,7 @@ export function searchGames(searchObj) {
   axios({
     method: 'GET',
     url: 'https://maps.googleapis.com/maps/api/geocode/json',
-    params: {address: searchObj.location, key: 'AIzaSyAlCGs74Skpymw9LLAjkMg-8jQ1gIue9n8'}
+    params: {address: searchObj.location, key: 'AIzaSyCndH7ksovHZhafwZMmJB_U7Je644MtnBk'}
   })
     .then(function(response) {
       if(response.data.results.length > 1) {
@@ -79,7 +79,7 @@ export function submitGame(gameObj) {
       .catch(function(error) {
         console.log(error, 'the error for the maps get call')
       })
-  }    
+  }
 }
 
 export function submitPlayer(playerObj) {
