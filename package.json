@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "nodemon server/server.js",
     "bundle": "webpack -w"
   },
   "repository": {
@@ -41,6 +41,7 @@
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.1.0",
     "request": "^2.72.0",
+    "sequelize": "^3.23.6",
     "webpack": "^1.13.1"
   },
   "devDependencies": {

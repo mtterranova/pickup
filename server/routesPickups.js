@@ -4,15 +4,14 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var db = require('./db/db.js');
-var controllers = require('./controllers/gamesController.js')
+var controller = require('./controllers/gamesController.js')
 
-
-for (var route in controllers) {
+for (var route in controller) {
   router.route("/" + route)
-    .get(controllers[route].get)
-    .post(controllers[route].post)
-    .put(controllers[route].put)
-    .delete(controllers[route].delete);
+    .get(controller[route].get)
+    .post(controller[route].post)
+    .put(controller[route].put)
+    .delete(controller[route].delete);
 }
 
 module.exports = router;
