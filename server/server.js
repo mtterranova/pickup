@@ -18,6 +18,12 @@ app.use(bodyParser.json());
 app.use(express.static('./client'));
 app.use('/api', pickups);
 
+app.get('*', function(req,res){
+	res.sendFile(path.resolve("client","index.html"))
+});
+
+
+
 
 // + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
 //CORS
