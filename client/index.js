@@ -8,11 +8,13 @@ import thunk from 'redux-thunk'
 
 import App from './public/components/app'
 import reducer from './public/reducers'
-import NavBar from './public/components/navBar'
-import Search from './public/containers/search'
-import Add from './public/containers/add'
-import GameListHome from './public/containers/gameListHome'
-import SearchHome from './public/containers/searchHome'
+
+import Login from './public/components/Login/Login'
+import Home from './public/components/Home'
+
+
+
+
 
 const createStoreWithMiddleWare = applyMiddleware(thunk)(createStore);
 
@@ -21,16 +23,10 @@ const createStoreWithMiddleWare = applyMiddleware(thunk)(createStore);
       <Router history={browserHistory}>
         
         <Route path="/" component={App} >
-          <IndexRoute component={Search} />
-          <Route path="/Search" component={Search} />
-          <Route path="/Add" component={Add} />
+          <IndexRoute component={Login} /> 
+          <Route path="/Home" component={Home}/>  
         </Route>
         
-        <Route path="/NavBar" component={NavBar} >
-          <Route path="/SearchHome" component={SearchHome} />
-          <Route path="/GameListHome" component={GameListHome} />
-        </Route>
-
       </Router>
     </Provider>
   ), document.getElementById('app'))

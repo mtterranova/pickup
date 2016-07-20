@@ -69,22 +69,13 @@ html, body {
 }
 
 #map {
-	top: 8%;
-	float: left;
-	/*display: inline-block;*/
-	/*bottom: 0px;*/
-	height: 100%;
-	width: 72%;
-	overflow: scroll;
-	/*left: 500px;*/
-	position: fixed;
-	/*right: 0px;*/
+	position: absolute;
+    top:0;
+    left: 0;
+    bottom:0;
+    right: 0;
 }
 
-.inputBox {
-	margin-left: 20px;
-	margin-right: 20px;
-}
 
 .brand-logo {
 	margin-left: 14px;
@@ -101,3 +92,9 @@ html, body {
 .card.card-panel.hoverable {
 	width: 390px;
 }
+
+
+
+
+
+
