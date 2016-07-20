@@ -130,6 +130,7 @@ class SearchHome extends Component {
   }
 
    gameMarkers() {
+    console.log(this.props.searchGames)
     return this.props.searchGames.map((game) => {
       return(
         <Marker

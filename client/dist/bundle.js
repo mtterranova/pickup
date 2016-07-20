@@ -30418,6 +30418,7 @@
 	    value: function gameMarkers() {
 	      var _this3 = this;
 	
+	      console.log(this.props.searchGames);
 	      return this.props.searchGames.map(function (game) {
 	        return _react2.default.createElement(_reactGmaps.Marker, {
 	          lat: game.lat,
@@ -55487,7 +55488,12 @@
 	        'div',
 	        { id: 'Navigation' },
 	        _react2.default.createElement(_ProfileAvatar2.default, null),
-	        _react2.default.createElement(_HamburgerMenu2.default, null)
+	        _react2.default.createElement(_HamburgerMenu2.default, null),
+	        _react2.default.createElement(
+	          'h1',
+	          { id: 'title', className: 'text-center' },
+	          'PickUpz'
+	        )
 	      );
 	    }
 	  }, {

@@ -12,7 +12,7 @@ export default class NavBar extends Component {
       <div id="Navigation">
        <ProfileAvatar/>
        <HamburgerMenu/>
-
+       <h1 id="title" className = "text-center">PickUpz</h1>
 
       </div>
 
