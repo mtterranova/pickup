@@ -10,17 +10,17 @@ module.exports = {
   create : function() {
     connection.query(this.games, function (err) {
       if (err) { console.log('error creating games table : ', err); }
-      else { console.log("games table created") }
+      else { /* console.log("games table created") */ }
     });
 
     connection.query(this.locations, function (err) {
       if (err) { console.log('error creating locations table : ', err); }
-      else { console.log("locations table created") }
+      else { /* console.log("locations table created") */ }
     });
 
     connection.query(this.players, function (err) {
       if (err) { console.log('error creating players table : ', err); }
-      else { console.log('players table created') }
+      else { /* console.log('players table created') */ }
     });
 
   }

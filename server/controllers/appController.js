@@ -1,9 +1,9 @@
+var passport = ('../middleware/passport.js');
 var model = require('../models/gamesModel.js');
-var url = require('url');
 
 module.exports = {
-  games : {
-    get : function(req, res) {
+  'games': {
+    get: function(req, res) {
       model.games.get(function(data, msg) {
         if (data) {
           res.send(data);
@@ -12,7 +12,7 @@ module.exports = {
         }
       })
     },
-    post : function(req, res) {
+    post: function(req, res) {
       model.games.post(function(data, msg) {
         if (data) {
           res.status(201).json({success: true});
@@ -21,7 +21,7 @@ module.exports = {
         }
       }, req.body);
     },
-    put : function(req, res) {
+    put: function(req, res) {
       model.games.put(function(data, msg) {
         if (data) {
           res.status(201).send(data);
@@ -31,7 +31,7 @@ module.exports = {
 
       }, req.body);
     },
-    delete : function(req, res) {
+    delete: function(req, res) {
       model.games.delete(function(data, msg) {
       })
     }

@@ -7,18 +7,16 @@ export default class NavBar extends Component {
   nav(){
     return(
       <div id="Navigation">
-       
+        <h1>YOOYOYOYOYOYO</h1>
       </div>
-
-
       )
   }
 
   render() {
     return(
     <div>
-        {this.nav()}         
-    </div>  
+        {this.nav()}
+    </div>
     )
   }
 }

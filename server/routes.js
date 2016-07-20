@@ -1,10 +1,6 @@
-
-//MODULES
 var express = require('express');
-var app = express();
 var router = express.Router();
-var db = require('./db/db.js');
-var controller = require('./controllers/gamesController.js')
+var controller = require('./controllers/appController.js')
 
 for (var route in controller) {
   router.route("/" + route)

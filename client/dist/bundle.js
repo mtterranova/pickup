@@ -54954,7 +54954,7 @@
 /* 415 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -54977,22 +54977,22 @@
 	var Login = function (_Component) {
 	  _inherits(Login, _Component);
 	
-	  function Login(props) {
+	  function Login() {
 	    _classCallCheck(this, Login);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Login).call(this, props));
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Login).apply(this, arguments));
 	  }
 	
 	  _createClass(Login, [{
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'div',
+	        "div",
 	        null,
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Login'
+	          "a",
+	          { href: "auth/facebook" },
+	          "Login with Facebook"
 	        )
 	      );
 	    }
@@ -55097,7 +55097,15 @@
 	  _createClass(NavBar, [{
 	    key: "nav",
 	    value: function nav() {
-	      return _react2.default.createElement("div", { id: "Navigation" });
+	      return _react2.default.createElement(
+	        "div",
+	        { id: "Navigation" },
+	        _react2.default.createElement(
+	          "h1",
+	          null,
+	          "YOOYOYOYOYOYO"
+	        )
+	      );
 	    }
 	  }, {
 	    key: "render",
