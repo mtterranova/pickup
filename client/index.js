@@ -23,7 +23,7 @@ const createStoreWithMiddleWare = applyMiddleware(thunk)(createStore);
       <Router history={browserHistory}>
         
         <Route path="/" component={App} >
-          <IndexRoute component={Login} /> 
+          <IndexRoute component={Home} /> 
           <Route path="/Home" component={Home}/>  
         </Route>
         
