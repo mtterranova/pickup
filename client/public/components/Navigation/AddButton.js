@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-import HamburgerIcon from 'material-ui/svg-icons/navigation/menu';
+import Add from 'material-ui/svg-icons/content/add';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-export default class HamburgerMenu extends Component {
+
+
+export default class AddButton extends Component {
   constructor(props) {
     super(props)
 }
 
   render() {
     return(
-    <div id = "HamMenu">
+    <div id = "addButton">
     	<MuiThemeProvider>
-    		<HamburgerIcon style={{'width':'50px','height':'50px'}}/>
+    	<Add style={{'width':'50px','height':'50px'}}/>
+
     	</MuiThemeProvider>
-    </div>  
+      
+	</div>
+
     )
   }
 }
