@@ -21,8 +21,11 @@ HamburgerMenu
 ********************/
 #HamMenu{
 	position:absolute;
-	top:10px;
+	top:3px;
 	right:10px;
+	height:auto;
+	width:50px;
+
 }
 #title{
 	top:-10px;
@@ -30,4 +33,13 @@ HamburgerMenu
 	left:50%;
 	transform:translateX(-50%);
 }
+
+#addButton{
+	position:absolute;
+	color: black;
+	top:3px;
+	right:70px;	
+	
+}
+
 

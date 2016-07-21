@@ -156,7 +156,7 @@ class SearchHome extends Component {
       <div>
 
       <div id="gamesView">
-        {this.searchedGameCards()}
+        {/* this.searchedGameCards() */}
       </div>
 
         <div id='map'>

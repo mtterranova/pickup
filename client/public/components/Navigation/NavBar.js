@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ProfileAvatar from './Profile/ProfileAvatar'
 import HamburgerMenu from './Drawer/HamburgerMenu'
+import AddButton from './addButton'
+import SearchBar from './SearchBar'
 
 export default class NavBar extends Component {
   constructor(props) {
@@ -13,6 +15,8 @@ export default class NavBar extends Component {
        <ProfileAvatar/>
        <HamburgerMenu/>
        <h1 id="title" className = "text-center">PickUpz</h1>
+       <AddButton/>
+       <SearchBar/>
       </div>
 
       )
