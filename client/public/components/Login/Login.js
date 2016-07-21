@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/auth.js';
 
-export default class Login extends Component {
-
-
+class Login extends Component {
 
   render() {
+
     return(
       <div>
-          <a href="auth/facebook">Login with Facebook</a>
+          <h1>Sign in</h1>
+          <button onClick={actions.signInWithFacebook} type="button">Facebook</button>
       </div>
     )
   }
+
 }
+
+export default connect(null, actions)(Login);
