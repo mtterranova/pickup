@@ -28858,12 +28858,6 @@
 	              loadingMessage: 'Be happy',
 	              params: { v: '3.exp', key: 'AIzaSyAlCGs74Skpymw9LLAjkMg-8jQ1gIue9n8' },
 	              onMapCreated: this.onMapCreated },
-	            _react2.default.createElement(_reactGmaps.Marker, {
-	              lat: this.props.determinedLocation.lat,
-	              lng: this.props.determinedLocation.lng,
-	              label: 'x',
-	              draggable: false,
-	              onDragEnd: this.onDragEnd }),
 	            this.gameMarkers()
 	          )
 	        )
@@ -72593,7 +72587,7 @@
 /* 626 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -72604,6 +72598,16 @@
 	var _react = __webpack_require__(2);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _redux = __webpack_require__(236);
+	
+	var _reactRedux = __webpack_require__(249);
+	
+	var _index = __webpack_require__(260);
+	
+	var actions = _interopRequireWildcard(_index);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -72619,19 +72623,43 @@
 	  function SearchBar(props) {
 	    _classCallCheck(this, SearchBar);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(SearchBar).call(this, props));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SearchBar).call(this, props));
+	
+	    _this.state = {
+	      locationInput: null
+	    };
+	    return _this;
 	  }
 	
 	  _createClass(SearchBar, [{
-	    key: "render",
+	    key: 'onLocationEnter',
+	    value: function onLocationEnter(e) {
+	      if (e.key === 'Enter') {
+	        e.preventDefault();
+	        console.log('do validate');
+	        var searchObj = { sport: 'basketball', location: this.state.locationInput };
+	        var data = this.props.searchGames(searchObj);
+	      }
+	    }
+	  }, {
+	    key: 'onLocationInput',
+	    value: function onLocationInput(e) {
+	      this.setState({
+	        locationInput: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'render',
 	    value: function render() {
+	      console.log(this.state.locationInput);
+	
 	      return _react2.default.createElement(
-	        "div",
-	        { id: "SearchBar" },
+	        'div',
+	        { id: 'SearchBar' },
 	        _react2.default.createElement(
-	          "form",
-	          { id: "demo-2" },
-	          _react2.default.createElement("input", { type: "search", placeholder: "Search" })
+	          'form',
+	          { id: 'demo-2' },
+	          _react2.default.createElement('input', { onKeyPress: this.onLocationEnter.bind(this), onChange: this.onLocationInput.bind(this), type: 'search', placeholder: 'Search' })
 	        )
 	      );
 	    }
@@ -72640,7 +72668,7 @@
 	  return SearchBar;
 	}(_react.Component);
 	
-	exports.default = SearchBar;
+	exports.default = (0, _reactRedux.connect)(null, actions)(SearchBar);
 
 /***/ }
 /******/ ]);
