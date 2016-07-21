@@ -169,12 +169,6 @@ class SearchHome extends Component {
             loadingMessage={'Be happy'}
             params={{v: '3.exp', key: 'AIzaSyAlCGs74Skpymw9LLAjkMg-8jQ1gIue9n8'}}
             onMapCreated={this.onMapCreated}>
-            <Marker
-              lat={this.props.determinedLocation.lat}
-              lng={this.props.determinedLocation.lng}
-              label={'x'}
-              draggable={false}
-              onDragEnd={this.onDragEnd} />
             { this.gameMarkers() }
           </Gmaps>
         </div>
