@@ -10,10 +10,10 @@ export default class NavBar extends Component {
 }
   nav(){
     return(
-    
+
       <div id="Navigation">
        <ProfileAvatar/>
-       <HamburgerMenu/>      
+       <HamburgerMenu/>
        <h1 id="title" className = "text-center">PickUpz</h1>
        <AddButton/>
        <SearchBar/>
@@ -25,8 +25,8 @@ export default class NavBar extends Component {
   render() {
     return(
     <div>
-        {this.nav()}         
-    </div>  
+        {this.nav()}
+    </div>
     )
   }
 }
