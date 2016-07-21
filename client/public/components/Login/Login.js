@@ -8,7 +8,7 @@ class Login extends Component {
 
     return(
       <div>
-          <h1>Sign in</h1>
+          <h1 id="login-title">Sign in</h1>
           <button onClick={actions.signInWithFacebook} type="button">Facebook</button>
       </div>
     )
