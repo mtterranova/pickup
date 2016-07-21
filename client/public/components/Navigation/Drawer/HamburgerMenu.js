@@ -11,9 +11,9 @@ export default class HamburgerMenu extends Component {
     return(
     <div id = "HamMenu">
     	<MuiThemeProvider>
-    		<HamburgerIcon style={{'width':'50px','height':'50px'}}/>
+    		<HamburgerIcon style={{'width':'45px','height':'45px', 'marginTop':'5px'}}/>
     	</MuiThemeProvider>
-    </div>  
+    </div>
     )
   }
 }

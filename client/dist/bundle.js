@@ -28603,13 +28603,13 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _index = __webpack_require__(260);
-	
-	var actions = _interopRequireWildcard(_index);
-	
 	var _moment = __webpack_require__(286);
 	
 	var _moment2 = _interopRequireDefault(_moment);
+	
+	var _index = __webpack_require__(260);
+	
+	var actions = _interopRequireWildcard(_index);
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
@@ -53862,6 +53862,7 @@
 	          _MuiThemeProvider2.default,
 	          null,
 	          _react2.default.createElement(_Avatar2.default, {
+	            style: { 'width': '45px', 'height': '45px' },
 	            src: 'https://avatars0.githubusercontent.com/u/13908543?v=3&s=400'
 	          })
 	        )
@@ -65371,7 +65372,7 @@
 	        _react2.default.createElement(
 	          _MuiThemeProvider2.default,
 	          null,
-	          _react2.default.createElement(_menu2.default, { style: { 'width': '50px', 'height': '50px' } })
+	          _react2.default.createElement(_menu2.default, { style: { 'width': '45px', 'height': '45px', 'marginTop': '5px' } })
 	        )
 	      );
 	    }
@@ -72535,7 +72536,7 @@
 	        _react2.default.createElement(
 	          _MuiThemeProvider2.default,
 	          null,
-	          _react2.default.createElement(_add2.default, { style: { 'width': '50px', 'height': '50px' } })
+	          _react2.default.createElement(_add2.default, { style: { 'width': '45px', 'height': '45px', 'marginTop': '5px' } })
 	        )
 	      );
 	    }
