@@ -37,6 +37,7 @@ HamburgerMenu
 #addButton{
 	position:absolute;
 	color: black;
+	z-index: 10;
 	top:3px;
 	right:70px;	
 	
@@ -65,8 +66,16 @@ AddDropDownMenu
 	animation-fill-mode: forwards;
 	-webkit-transition: 1000ms fadeInAni;
 	-webkit-animation-fill-mode: forwards;
-	z-index: 4;
+	z-index: 4 !important;
 }
+
+/*.FadeOut {
+	animation: 1000ms fadeOutAni;
+	animation-fill-mode: backwards;
+	-webkit-transition: 1000ms fadeOutAni;
+	-webkit-animation-fill-mode: backwards;
+	z-index: 0;
+}*/
 
 @keyframes fadeInAni {
     0% {
@@ -79,3 +88,15 @@ AddDropDownMenu
         opacity: 0.7;
     }
 }
+
+/*@keyframes fadeOutAni {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 0.35;
+    }
+    100% {
+        opacity: 0;
+    }
+}*/
