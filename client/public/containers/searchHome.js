@@ -3,7 +3,6 @@ import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import $ from 'jquery';
-import { submitPlayer } from '../actions/index';
 import moment from 'moment';
 import * as actions from '../actions/index'
 
@@ -158,7 +157,6 @@ class SearchHome extends Component {
       <div id="gamesView">
         {/* this.searchedGameCards() */}
       </div>
-
         <div id='map'>
           <Gmaps
             width={'100%'}
@@ -172,8 +170,6 @@ class SearchHome extends Component {
             { this.gameMarkers() }
           </Gmaps>
         </div>
-
-
       </div>
     );
   }

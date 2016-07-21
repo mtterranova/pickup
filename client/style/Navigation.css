@@ -1,9 +1,10 @@
 #Navigation{
-	background-color: transparent;
+	background-color: rgba(205, 92, 92, 0.5);
 	width:100%;
-	height:50px;
+	height:65px;
 	position:absolute;
 	z-index: 4;
+	border-bottom: 2px solid indianred;
 }
 
 /*********************
@@ -14,6 +15,19 @@ ProfileAvatar
 	padding-left:10px;
 	width:50px;
 	height:50px;
+}
+
+#ProfileAvatar > img {
+	width: 100%;
+	border: 2px solid #eee;
+}
+
+svg {
+	fill: #eee !important;
+}
+
+svg:hover {
+	transform: scale(1.15);
 }
 
 /********************
@@ -29,8 +43,10 @@ HamburgerMenu
 }
 #title{
 	top:-10px;
+	text-shadow: 0 0 3px indianred;
 	position:absolute;
 	left:50%;
+	color: #eee;
 	transform:translateX(-50%);
 }
 
@@ -38,8 +54,6 @@ HamburgerMenu
 	position:absolute;
 	color: black;
 	top:3px;
-	right:70px;	
-	
+	right:70px;
+
 }
-
-

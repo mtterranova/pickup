@@ -8,12 +8,13 @@ class ProfileAvatar extends Component {
   constructor(props) {
     super(props)
 }
-  
+
   render() {
     return(
       <div id="ProfileAvatar">
         <MuiThemeProvider>
          <Avatar
+           style={{'width':'45px','height':'45px'}}
            src="https://avatars0.githubusercontent.com/u/13908543?v=3&s=400"
           />
         </MuiThemeProvider>

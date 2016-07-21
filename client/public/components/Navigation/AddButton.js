@@ -13,10 +13,9 @@ export default class AddButton extends Component {
     return(
     <div id = "addButton">
     	<MuiThemeProvider>
-    	<Add style={{'width':'50px','height':'50px'}}/>
-
+    	 <Add style={{'width':'45px','height':'45px','marginTop':'5px'}}/>
     	</MuiThemeProvider>
-      
+
 	</div>
 
     )
