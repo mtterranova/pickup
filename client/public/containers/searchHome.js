@@ -19,7 +19,6 @@ class SearchHome extends Component {
   componentWillMount() {
     var searchObj = { sport: 'basketball', location: '340 Main St, Venice, CA 90291' };
     let data = this.props.searchGames(searchObj);
-    console.log(data)
   }
 
   onMapCreated(map) {
