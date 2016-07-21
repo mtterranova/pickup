@@ -8,6 +8,7 @@ import SvgIcon from 'material-ui/svg-icons/navigation/menu';
 import * as actions from '../../../actions/index';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import _ from 'underscore';
 
 
 class HamburgerMenu extends Component {
@@ -20,7 +21,32 @@ class HamburgerMenu extends Component {
 }
 
 createGameItems(){
-    console.log(this.props.games,"hello");
+    var games = this.props.games;
+    var listItems = _.map(games,function(map){
+      var location = map.location;
+      var author = map.created_by;
+      
+      var players = JSON.parse(map.joinedPlayers);
+      var playersNeeded = map.playersNeeded;
+      var rules = map.rules;
+      var sport = map.sport;
+      return (
+        <ListItem 
+               onClick={this.handleListItemClick}
+               primaryText={
+                  <p>{sport}</p>
+              }
+               secondaryText={
+                <p>
+                  <span>Players: {players.length} / {playersNeeded} </span><br />
+                  <span>Location: 604 Arizona Ave</span><br />
+                </p>
+              }
+              secondaryTextLines={2}
+            />
+      )
+    })
+    return listItems;
 }
 
 handleOpenDrawer(){
@@ -30,7 +56,7 @@ handleOpenDrawer(){
 }
 
   render() {
-    this.createGameItems();
+    var listItems = this.createGameItems();
     return(
     <div id = "HamMenu">
 
@@ -41,18 +67,7 @@ handleOpenDrawer(){
         </button>
         <MuiThemeProvider>
           <Drawer open={this.state.open} openSecondary={true}>
-            <ListItem
-               primaryText={
-                  <p>Basketball</p>
-              }
-               secondaryText={
-                <p>
-                  <span>Players: 3/5</span><br />
-                  <span>Location: 604 Arizona Ave</span><br />
-                </p>
-              }
-              secondaryTextLines={2}
-            />
+            {listItems}
           </Drawer>
         </MuiThemeProvider>
     </div>  
