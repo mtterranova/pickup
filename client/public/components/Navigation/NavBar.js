@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import ProfileAvatar from './Profile/ProfileAvatar'
 import HamburgerMenu from './Drawer/HamburgerMenu'
-import AddButton from './addButton'
 import SearchBar from './SearchBar'
-import Add from '../../containers/add'
+import AddGame from '../../containers/addGame'
+import AddIcon from 'material-ui/svg-icons/content/add';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class NavBar extends Component {
 	constructor(props) {
@@ -14,6 +15,7 @@ export default class NavBar extends Component {
 	}
 
 	handleAddFormClick() {
+		console.log(this.state.addForm);
 		this.setState({ addForm: 'FadeIn' })
 	}
 
@@ -21,11 +23,19 @@ export default class NavBar extends Component {
 		return (
 
 			<div>
+
 				<div id="Navigation">
 			   		<ProfileAvatar />
 			   		<HamburgerMenu />
 			   		<h1 id="title" className = "text-center">PickUpz</h1>
-			   		<AddButton onClick = {this.handleAddFormClick.bind(this)} />
+				   		<div
+				   			id="addButton"
+				   			onClick={this.handleAddFormClick.bind(this)}
+				   		>
+			   				<MuiThemeProvider>
+    							<AddIcon style={{'width':'50px','height':'50px'}}/>
+    						</MuiThemeProvider>
+			   			</div>
 			   		<SearchBar />
 			  	</div>
 
@@ -33,9 +43,10 @@ export default class NavBar extends Component {
 					id="addFormWrapper"
 					className={this.state.addForm}>
 
-					<Add id="addFormWrapper"/>
+					<AddGame id="addFormWrapper"/>
 
 				</div>
+
 			</div>
 		)
 	}
