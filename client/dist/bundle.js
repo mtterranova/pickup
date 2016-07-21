@@ -28502,7 +28502,7 @@
 	        null,
 	        _react2.default.createElement(
 	          'h1',
-	          null,
+	          { id: 'login-title' },
 	          'Sign in'
 	        ),
 	        _react2.default.createElement(

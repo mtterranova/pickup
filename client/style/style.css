@@ -1,6 +1,6 @@
 /*.img-responsive {
-	max-width: 10%;  
-	max-height: auto;  
+	max-width: 10%;
+	max-height: auto;
 }*/
 
 /*#addTableID {*/
@@ -12,7 +12,7 @@
 }
 
 body, html {
-	background: linear-gradient(to bottom, #f7fbfc 0%,#d9edf2 40%,#add9e4 100%);
+	background-color: indianred;
 }
 
 h1 {
@@ -92,10 +92,3 @@ html, body {
 .card.card-panel.hoverable {
 	width: 390px;
 }
-
-
-
-
-
-
-
