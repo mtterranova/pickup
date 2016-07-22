@@ -5,21 +5,24 @@ import { connect } from 'react-redux';
 import $ from 'jquery';
 import moment from 'moment';
 import * as actions from '../actions/index'
+import GameCard from '../components/GameCard'
 
 class SearchHome extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      newPlayerName: ''
+      newPlayerName: '',
+      game:'',
+      animation:''
     }
-
+    this.handleMarkerClick = this.handleMarkerClick.bind(this)
+    this.handleCancelClick = this.handleCancelClick.bind(this)
   }
 
   componentWillMount() {
     var searchObj = { sport: 'basketball', location: '340 Main St, Venice, CA 90291' };
     let data = this.props.searchGames(searchObj);
-    console.log(data)
   }
 
   onMapCreated(map) {
@@ -143,11 +146,25 @@ class SearchHome extends Component {
           lng={game.lng}
           label={String.fromCharCode(game.id + 64)}
           draggable={false}
-          onDragEnd={this.onDragEnd} />
+          onDragEnd={this.onDragEnd}
+          onClick={this.handleMarkerClick.bind(null,game)} />
       )
     })
   }
 
+  handleMarkerClick(game){
+    this.setState({
+      game:game,
+      animation:'SlideInFromTop'
+    })
+  }
+
+  handleCancelClick(){
+    console.log('handle cancel click inside search home');
+    this.setState({
+      animation:'SlideOutToTop'
+    })
+  }
 
 
   render() {
@@ -169,6 +186,7 @@ class SearchHome extends Component {
             onMapCreated={this.onMapCreated}>
             { this.gameMarkers() }
           </Gmaps>
+          <GameCard animation={this.state.animation} game={this.state.game} handleCancelClick={this.handleCancelClick}/>
         </div>
       </div>
     );
