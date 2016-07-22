@@ -19,6 +19,11 @@ export default class NavBar extends Component {
 		this.setState({ addForm: 'FadeIn' })
 	}
 
+	handleCancelClick() {
+		this.setState({ addForm: 'FadeOut' })
+		console.log(this.state.addForm);
+	}
+
   	nav(){
 		return (
 
@@ -43,7 +48,11 @@ export default class NavBar extends Component {
 					id="addFormWrapper"
 					className={this.state.addForm}>
 
-					<AddGame id="addFormWrapper"/>
+					<AddGame 
+						id="addFormWrapper"
+						classChange={this.handleCancelClick.bind(this)}
+
+					/>
 
 				</div>
 
