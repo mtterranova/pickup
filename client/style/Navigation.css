@@ -46,22 +46,7 @@ Profile
     }
 }
 
-.SlideOut {
-	animation: 250ms slideO ease-in-out;
-	animation-fill-mode: forwards;
-	-webkit-transition: 250ms slideO ease-in-out;
-	-webkit-animation-fill-mode: forwards;
-}
 
-@-webkit-keyframes slideO {
-    100% { left: -350px; }
-}
-​
-@keyframes slideO {
-	100% {
-        left: -350px;
-    }
-}
 
 #HideProfileButton {
 	position: absolute;
