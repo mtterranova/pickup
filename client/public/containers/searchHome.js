@@ -5,14 +5,17 @@ import { connect } from 'react-redux';
 import $ from 'jquery';
 import moment from 'moment';
 import * as actions from '../actions/index'
+import GameCard from '../components/GameCard'
 
 class SearchHome extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      newPlayerName: ''
+      newPlayerName: '',
+      game:''
     }
+    this.handleMarkerClick = this.handleMarkerClick.bind(this)
 
   }
 
@@ -142,11 +145,19 @@ class SearchHome extends Component {
           lng={game.lng}
           label={String.fromCharCode(game.id + 64)}
           draggable={false}
-          onDragEnd={this.onDragEnd} />
+          onDragEnd={this.onDragEnd}
+          onClick={this.handleMarkerClick.bind(null,game)} />
       )
     })
   }
 
+  handleMarkerClick(game){
+    this.setState({
+      game:game
+    })
+    console.log(this.state.game)
+    
+  }
 
 
   render() {
@@ -168,6 +179,7 @@ class SearchHome extends Component {
             onMapCreated={this.onMapCreated}>
             { this.gameMarkers() }
           </Gmaps>
+          <GameCard game={this.state.game}/>
         </div>
       </div>
     );
