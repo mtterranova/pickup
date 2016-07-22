@@ -13,10 +13,11 @@ class SearchHome extends Component {
 
     this.state = {
       newPlayerName: '',
-      game:''
+      game:'',
+      animation:''
     }
     this.handleMarkerClick = this.handleMarkerClick.bind(this)
-
+    this.handleCancelClick = this.handleCancelClick.bind(this)
   }
 
   componentWillMount() {
@@ -153,10 +154,16 @@ class SearchHome extends Component {
 
   handleMarkerClick(game){
     this.setState({
-      game:game
+      game:game,
+      animation:'SlideInFromTop'
     })
-    console.log(this.state.game)
-    
+  }
+
+  handleCancelClick(){
+    console.log('handle cancel click inside search home');
+    this.setState({
+      animation:'SlideOutToTop'
+    })
   }
 
 
@@ -179,7 +186,7 @@ class SearchHome extends Component {
             onMapCreated={this.onMapCreated}>
             { this.gameMarkers() }
           </Gmaps>
-          <GameCard game={this.state.game}/>
+          <GameCard animation={this.state.animation} game={this.state.game} handleCancelClick={this.handleCancelClick}/>
         </div>
       </div>
     );
