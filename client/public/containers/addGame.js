@@ -200,7 +200,7 @@ class Add extends Component {
 	                    	/>
 	                  	</tr>
 	                  	
-      					<div>
+      					<div className="form-buttons">
       						<span className="addFormSubmit">
 			              		<button
 			              			onClick={ this.onSubmit.bind(this) }

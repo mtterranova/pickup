@@ -5,6 +5,7 @@ import SearchBar from './SearchBar'
 import AddGame from '../../containers/addGame'
 import AddIcon from 'material-ui/svg-icons/content/add';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import $ from 'jquery';
 
 export default class NavBar extends Component {
 	constructor(props) {
@@ -21,6 +22,7 @@ export default class NavBar extends Component {
 
 	handleCancelClick() {
 		this.setState({ addForm: 'FadeOut' })
+		$("#errorMessage").hide();
 		console.log(this.state.addForm);
 	}
 
